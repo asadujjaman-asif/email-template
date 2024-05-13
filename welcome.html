@@ -9,14 +9,19 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
     <!-- CSS Reset : BEGIN -->
     <style>
     @import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
     @font-face{
-    font-family:'yaahowuBold';
-    src:url("fonts/Yaahowu Bold.ttf");
-}
+    	font-family:'yaahowuBold';
+    	src:url("fonts/Yaahowu Bold.ttf");
+	}
+	@font-face{
+	    font-family:'yaahowuOnoNiha';
+	    src:url("fonts/Yaahowu.ttf");
+	}
         html,
 body {
     margin: 0 auto !important;
@@ -24,7 +29,7 @@ body {
     height: 100% !important;
     width: 100% !important;
     background: #fff;
-    font-family:'yaahowuBold';
+    font-family:'yaahowuOnoNiha';
 }
 
 /* What it does: Stops email clients resizing small text. */
@@ -72,7 +77,7 @@ a {
     color: inherit !important;
     text-decoration: none !important;
     font-size: inherit !important;
-    font-family:'yaahowuBold';
+    font-family:'yaahowuOnoNiha';
     font-weight: inherit !important;
     line-height: inherit !important;
 }
@@ -182,23 +187,20 @@ img.g-img + div {
 }
 
 h1,h2,h3,h4,h5,h6{
-	font-family:'yaahowuBold';
+	font-family:'yaahowuOnoNiha';
 	color: #000000;
 	margin-top: 0;
 	font-weight: 400;
 }
 
 body{
-	font-family:'yaahowuBold';
+	font-family:'yaahowuOnoNiha';
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 1.8;
 	color: rgba(0,0,0,.5);
 }
 
-a{
-	color: #74b49b;
-}
 
 p{
 	margin-top: 0;
@@ -215,7 +217,7 @@ table{
 	color: #000000;
 	font-size: 20px;
 	font-weight: 700;
-	font-family:'yaahowuBold';
+	font-family:'yaahowuOnoNiha';
 }
 
 /*HERO*/
@@ -381,7 +383,7 @@ table{
 	color: rgba(255,255,255,.8);
 }
 .heading-section-white h2{
-	font-family:'yaahowuBold';
+	font-family:'yaahowuOnoNiha';
 	padding-bottom: 0;
 }
 .heading-section-white h2{
@@ -403,10 +405,13 @@ ul.social{
 ul.social li{
 	display: inline-block;
 	margin-right: 10px;
-	/*border: 1px solid #74b49b;*/
-	padding: 10px;
+	border: 1px solid #F69788;
+	padding: 9px 15px;
 	border-radius: 50%;
-	background: rgba(0,0,0,.05);
+	overflow: hidden;
+}
+ul.social li a{
+	color:#F69788;
 }
 
 /*FOOTER*/
@@ -436,24 +441,45 @@ ul.social li{
 
 
 }
-.required-link{
+/*.required-link{
 	margin: 0;
 	padding: 0;
-}
-.required-link ul{
+}*/
+.required-link{
 	list-style: none;
 	text-transform: uppercase;
-	display: flex;
+	margin: 10px 0px;
+	padding: 0;
+/*	display: flex;*/
 }
-.required-link ul li{
+.required-link li{
 	padding: 0px 10px;
 	border-right: 2px solid #000;
 }
-.required-link ul li:last-child{
+.required-link li:last-child{
 	border-right: none;
 }
-.required-link ul li a{
+.required-link li a{
 	color: #000;
+}
+.verify{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verify-btn{
+	padding:8px 20px;
+    border:none;
+    margin-bottom: 10px;
+    overflow:hidden;
+    background:#F69788;
+    color:#fff;
+    font-size: 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.bg_white p a{
+	color:#000;
 }
 
 
@@ -482,7 +508,7 @@ ul.social li{
 	      </tr><!-- end tr -->
         <tr>
           <td class="bg_white" style="padding:5px 10px;color:#000;font-weight:bold;text-transform: uppercase;">
-          	<p>BASIC CUSTOM COSMETICS | welcome</p>
+          	<p><a href="#" style="colo:#000;">BASIC CUSTOM COSMETICS</a> | welcome</p>
           </td>
         </tr>
 	     <!-- end tr -->
@@ -490,9 +516,11 @@ ul.social li{
 	      	<td class="bg_white email-section">
 	      		<div class="heading-section" style="text-align: justify;text-transform: uppercase;">
 	            	<p>DEAR CUSTOMER'S FIRST NAME/LAST NAME/FULL NAME (FIRST NAME + LAST NAME) / EMAIL ADDRESS,</p>
-	            	<p>your basic account is now live.please click on the button bellow to activate your basic account.</p>
+	            	<p>your basic account is now live. please click on the button bellow to activate your basic account.</p>
           		</div>
-          		<a href="#" style="text-align: center;padding:8px 20px; border:none;left:35%;transform: translateX(-35%);position: relative;margin-bottom: 10px;overflow:hidden;background:#F69788;color:#fff;font-size: 13px;border-radius: 10px;text-transform: uppercase;">verify</a>
+          		<div class="verify">
+          			<a href="#" class="verify-btn">verify</a>
+          		</div>
 	      	</td>
 
 	      </tr>
@@ -502,20 +530,26 @@ ul.social li{
           <td valign="top" class="bg_white" style="padding: 0;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-			          <td width="60%" style="text-align: center;">
-			            <ul class="social">
-			            <li><a href="#"><img src="images/005-facebook.png" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                		<li><a href="#"><img src="images/2701883.webp" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                		<li><a href="#"><img src="images/006-instagram-logo.png" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                	</ul>
-			          </td>
+			        <td width="60%" style="text-align: center;">
+			            <ul class="social verify">
+			            	<li>
+			            		<a href="#"><i class="fa-brands fa-facebook"></i></a>
+			            	</li>
+                			<li>
+                				<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                			</li>
+                			<li>
+                				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+                			</li>
+                		</ul>
+			        </td>
           		</tr>
           	</table>
           </td>
       	</tr>
       	
        	<tr>
-          <td valign="top" class="bg_white" style="padding: 0;">
+          <td valign="top" class="bg_white verify" style="padding: 0;">
           	<p style="text-align: center"> &#169;2022 AEQUM CUSTOMIZED COSMETICS LIMITED</p>
           </td>
       	</tr>
@@ -523,8 +557,8 @@ ul.social li{
           <td valign="top" class="bg_white" style="padding: 0;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-			          <td class="required-link" width="60%" style="text-align: center;">
-			            <ul>
+			          <td>
+			            <ul class="verify required-link">
                 		<li><a href="#">TERMS AND CONDITIONS</a></li>
                 		<li><a href="#">PRIVACY POLICY</a></li>
                 		<li><a href="#">CONTACT US</a></li>
