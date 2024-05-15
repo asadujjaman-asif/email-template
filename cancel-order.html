@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
     <!-- CSS Reset : BEGIN -->
     <style>
     @import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
@@ -407,10 +409,13 @@ ul.social{
 ul.social li{
 	display: inline-block;
 	margin-right: 10px;
-	/*border: 1px solid #74b49b;*/
-	padding: 10px;
+	border: 1px solid #F69788;
+	padding: 9px 15px;
 	border-radius: 50%;
-	background: rgba(0,0,0,.05);
+	overflow: hidden;
+}
+ul.social li a{
+	color:#F69788;
 }
 
 /*FOOTER*/
@@ -441,22 +446,39 @@ ul.social li{
 
 }
 .required-link{
-	margin: 0;
-	padding: 0;
-}
-.required-link ul{
 	list-style: none;
 	text-transform: uppercase;
-	display: flex;
+	margin: 10px 0px;
+	padding: 0;
+/*	display: flex;*/
 }
-.required-link ul li{
+.required-link li{
 	padding: 0px 10px;
 	border-right: 2px solid #000;
 }
-.required-link ul li:last-child{
+.required-link li:last-child{
 	border-right: none;
 }
-.required-link ul li a{
+.required-link li a{
+	color: #000;
+}
+.verify{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verify-btn{
+	padding:8px 20px;
+    border:none;
+    margin-bottom: 10px;
+    overflow:hidden;
+    background:#F69788;
+    color:#fff;
+    font-size: 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.bg_white a{
 	color: #000;
 }
 
@@ -486,7 +508,7 @@ ul.social li{
 	      </tr><!-- end tr -->
         <tr>
           <td class="bg_white" style="padding:5px 10px;color:#000;font-weight:bold;text-transform: uppercase;">
-          	<p>BASIC CUSTOM COSMETICS | YOUR ORDER HAS BEEN CANCELLED.</p>
+          	<p><a href="#">BASIC CUSTOM COSMETICS</a> | YOUR ORDER HAS BEEN CANCELLED.</p>
           </td>
         </tr>
 	     <!-- end tr -->
@@ -496,13 +518,15 @@ ul.social li{
 	            	<p>DEAR CUSTOMER'S FIRST NAME/LAST NAME/FULL NAME (FIRST NAME + LAST NAME) / EMAIL ADDRESS,</p>
 	            	<p>YOUR ORDER HAS BEEN CALCELLED. WE'LL PROCESS A REFUND WITHIN 7 WORKING DAYS. IF YOU HAVE ANY ISSUES WITH YOUR ORDER, YOU CAN <u><a href="">CONTACT US.</a></u></p>
           		</div>
-          		<a href="#" style="text-align: center;padding:8px 20px; border:none;left:40%;transform: translateX(-40%);position: relative;margin-bottom: 10px;overflow:hidden;background:#F69788;color:#fff;font-size: 13px;border-radius: 10px;"> VIEW ORDER</a>
+          		<div class="verify">
+          			<a href="#" class="verify-btn" style="color:#fff">verify</a>
+          		</div>
 	      	</td>
 
 	      </tr>
 	      <tr>
           <td class="email-section" style="margin-top: 30px;overflow: hidden;">
-          	<p style="border-bottom:1.8px solid #74b49b;color:#000; font-size:13px">ORDER DETAILS</p>
+          	<p style="border-bottom:1.8px solid #74b49b;color:#000; font-size:13px;font-family:yaahowuBold">ORDER DETAILS</p>
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td valign="top" width="50%" class="services">
@@ -538,11 +562,11 @@ ul.social li{
 	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;border-radius: 10px;min-height:220px">
 	                    <tr>
 	                      <td class="text-services" style="margin-top:-100px;margin-right:50px;overflow: hidden; width:95%">
-	                      	<div style="display:flex;margin-top:-80px">
+	                      	<div style="display:flex;margin-top:-80px;font-family:yaahowuBold">
 		                      	<p style="color:#000;margin:0;padding:0;">SHIPPING INFO</p>
 		                      	<p style="color:#000;margin:0;padding:0;right:0;text-align: right;overflow: hidden;margin-left: 64%;">−</p>
 	                      	</div>
-	                       	<span style="font-size: 12px;line-height: 10px;color:#000;">FARIHA AHMAD FARIN</span>
+	                       	<span style="font-size: 12px;line-height: 10px;font-family:yaahowuBold">FARIHA AHMAD FARIN</span>
 	                       	<p class="address-one"style="font-size: 12px;line-height: 5px;">FLAT E, FLOOR 13, TOWER 03</p>
 	                       	<p class="address-two" style="font-size: 12px;line-height: 5px;">SERENO VERDE, 99 TAI HONG ROAD</p>
 	                       	<p class="city" style="font-size: 12px;line-height: 5px;">YUEN LONG, HONG KONG OOOO</p> 
@@ -559,13 +583,13 @@ ul.social li{
 	                    <tr>
 	                      <td class="text-services">
 	                      	<div style="display:flex;">
-		                      	<p style="color:#000;margin:0;padding:0;">PAYMENT INFO</p>
+		                      	<p style="color:#000;margin:0;padding:0;font-family:yaahowuBold">PAYMENT INFO</p>
 		                      	<p style="color:#000;margin:0;padding:0;right:0;text-align: right;overflow: hidden;margin-left: 60%;">−</p>
 	                      	</div>
 	                      	<p style="width: 50px;background: #12AD2B ;height:20px"></p>
 	                      	<p style="font-size: 12px;line-height: 15px;">PAYMENT METHOD<br>
 	                       	**** LAST 4 DIGITS</p>
-	                       	<span style="font-size: 12px;line-height: 10px;color:#000;">FARIHA AHMAD FARIN</span>
+	                       	<span style="font-size: 12px;line-height: 10px;font-family:yaahowuBold">FARIHA AHMAD FARIN</span>
 	                       	<p class="address-one"style="font-size: 12px;line-height: 5px;">FLAT E, FLOOR 13, TOWER 03</p>
 	                       	<p class="address-two" style="font-size: 12px;line-height: 5px;">SERENO VERDE, 99 TAI HONG ROAD</p>
 	                       	<p class="city" style="font-size: 12px;line-height: 5px;">YUEN LONG, HONG KONG OOOO</p> 
@@ -585,7 +609,7 @@ ul.social li{
 	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;border-radius: 10px;min-height:220px;margin-top:10px">
 	                    <tr>
 	                      <td class="text-services" style="margin-top:-50px">
-	                      	<h3>ITEM(S) ORDERED:</h3>
+	                      	<h3 style="font-family:yaahowuBold">ITEM(S) ORDERED:</h3>
 	                      	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 				          		<tr>
 				          			<td valign="top" width="100%" class="services">
@@ -751,7 +775,7 @@ ul.social li{
 	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;border-radius: 10px;min-height:220px">
 	                    <tr>
 	                      <td>
-	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;">order summary</p>
+	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;font-family:yaahowuBold;color: #000;">order summary</p>
 	                      </td>
 	                      <td>
 	                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;">&#8722;</p>
@@ -811,20 +835,26 @@ ul.social li{
           <td valign="top" class="bg_white" style="padding: 0;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-			          <td width="60%" style="text-align: center;">
-			            <ul class="social">
-			            <li><a href="#"><img src="images/005-facebook.png" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                		<li><a href="#"><img src="images/2701883.webp" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                		<li><a href="#"><img src="images/006-instagram-logo.png" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                	</ul>
-			          </td>
+			        <td width="60%" style="text-align: center;">
+			            <ul class="social verify">
+			            	<li>
+			            		<a href="#"><i class="fa-brands fa-facebook"></i></a>
+			            	</li>
+                			<li>
+                				<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                			</li>
+                			<li>
+                				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+                			</li>
+                		</ul>
+			        </td>
           		</tr>
           	</table>
           </td>
       	</tr>
       	
        	<tr>
-          <td valign="top" class="bg_white" style="padding: 0;">
+          <td valign="top" class="bg_white verify" style="padding: 0;">
           	<p style="text-align: center"> &#169;2022 AEQUM CUSTOMIZED COSMETICS LIMITED</p>
           </td>
       	</tr>
@@ -832,8 +862,8 @@ ul.social li{
           <td valign="top" class="bg_white" style="padding: 0;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-			          <td class="required-link" width="60%" style="text-align: center;">
-			            <ul>
+			          <td>
+			            <ul class="verify required-link">
                 		<li><a href="#">TERMS AND CONDITIONS</a></li>
                 		<li><a href="#">PRIVACY POLICY</a></li>
                 		<li><a href="#">CONTACT US</a></li>
