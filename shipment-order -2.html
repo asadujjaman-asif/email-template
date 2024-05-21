@@ -9,14 +9,19 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
     <!-- CSS Reset : BEGIN -->
     <style>
     @import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
     @font-face{
-    font-family:'yaahowuBold';
-    src:url("fonts/Yaahowu Bold.ttf");
-}
+    	font-family:'yaahowuBold';
+    	src:url("fonts/Yaahowu Bold.ttf");
+	}
+	@font-face{
+	    font-family:'yaahowuOnoNiha';
+	    src:url("fonts/Yaahowu.ttf");
+	}
         html,
 body {
     margin: 0 auto !important;
@@ -24,7 +29,7 @@ body {
     height: 100% !important;
     width: 100% !important;
     background: #fff;
-    font-family:'yaahowuBold';
+    font-family:'yaahowuOnoNiha';
 }
 
 /* What it does: Stops email clients resizing small text. */
@@ -72,7 +77,7 @@ a {
     color: inherit !important;
     text-decoration: none !important;
     font-size: inherit !important;
-    font-family:'yaahowuBold';
+    font-family:'yaahowuOnoNiha';
     font-weight: inherit !important;
     line-height: inherit !important;
 }
@@ -182,14 +187,14 @@ img.g-img + div {
 }
 
 h1,h2,h3,h4,h5,h6{
-	font-family:'yaahowuBold';
+	font-family:'yaahowuOnoNiha';
 	color: #000000;
 	margin-top: 0;
 	font-weight: 400;
 }
 
 body{
-	font-family:'yaahowuBold';
+	font-family:'yaahowuOnoNiha';
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 1.8;
@@ -215,7 +220,7 @@ table{
 	color: #000000;
 	font-size: 20px;
 	font-weight: 700;
-	font-family:'yaahowuBold';
+	font-family:'yaahowuOnoNiha';
 }
 
 /*HERO*/
@@ -403,10 +408,13 @@ ul.social{
 ul.social li{
 	display: inline-block;
 	margin-right: 10px;
-	/*border: 1px solid #74b49b;*/
-	padding: 10px;
+	border: 1px solid #F69788;
+	padding: 9px 15px;
 	border-radius: 50%;
-	background: rgba(0,0,0,.05);
+	overflow: hidden;
+}
+ul.social li a{
+	color:#F69788;
 }
 
 /*FOOTER*/
@@ -437,28 +445,97 @@ ul.social li{
 
 }
 .required-link{
-	margin: 0;
-	padding: 0;
-}
-.required-link ul{
 	list-style: none;
 	text-transform: uppercase;
-	display: flex;
+	margin: 10px 0px;
+	padding: 0;
+/*	display: flex;*/
 }
-.required-link ul li{
+.required-link li{
 	padding: 0px 10px;
 	border-right: 2px solid #000;
 }
-.required-link ul li:last-child{
+.required-link li:last-child{
 	border-right: none;
 }
-.required-link ul li a{
+.required-link li a{
 	color: #000;
 }
-.color-div p{
-	padding: 0px 10px;
-	margin-left: 10px;
+.verify{
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.verify-btn{
+	padding:8px 20px;
+    border:none;
+    margin-bottom: 10px;
+    overflow:hidden;
+    background:#F69788;
+    color:#fff;
+    font-size: 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.bg_white a{
+	color: #000;
+}
+#shippingContent,#paymentContent {
+     display: block;
+     margin-left: 10px; /* Initially hide the content */
+}
+.accordion{
+    	border: 1px solid #74b49b;
+    	border-radius: 10px;
+    	/*min-height: 220px;*/
+    }
+    .accordion .accordion-content{
+    /*margin:10px 0;
+    border-radius: 5px;
+    background-color: #e8ffdc;
+    border-color: #bbffaa;
+    overflow: hidden;*/
+    }
+    
+    .accordion-content.is-open{
+    padding-bottom: 10px;
+    }
+    .accordion-content header{
+	    display:flex;
+	    min-height: 50px;
+	    padding: 0 15px;
+	    cursor: pointer;
+	    align-items: center;
+	    justify-content: space-between;
+	    transition:all 0.2s linear;
+    }
+    .accordion-content-payment header{
+	    display:flex;
+	    min-height: 50px;
+	    padding: 0 15px;
+	    cursor: pointer;
+	    align-items: center;
+	    justify-content: space-between;
+	    transition:all 0.2s linear;
+    }
+    .accordion-content.is-open header{
+    	min-height: 35px;
+    }
+    .accordion-content-payment.is-open header{
+    	min-height: 35px;
+    }
+    .accordion-content-title{
+	    font-size: 1rem;
+	    font-weight: 600;
+	    color:#000000;
+    }
+    .accordion-content-description{
+    height:0;
+    font-size: 13px;
+    color:#000000;
+    font-weight: 400;
+    padding: 0 15px;
+    }
 
     </style>
 
@@ -485,17 +562,19 @@ ul.social li{
 	      </tr><!-- end tr -->
         <tr>
           <td class="bg_white" style="padding:5px 10px;color:#000;font-weight:bold;text-transform: uppercase;">
-          	<p>BASIC CUSTOM COSMETICS | your order is on the way</p>
+          	<p><a href="#">BASIC CUSTOM COSMETICS</a> | your order is on the way</p>
           </td>
         </tr>
 	     <!-- end tr -->
 	      <tr>
 	      	<td class="bg_white email-section">
 	      		<div class="heading-section" style="text-align: justify;text-transform: uppercase;">
-	            	<p>DEAR CUSTOMER'S FIRST NAME/LAST NAME/FULL NAME (FIRST NAME + LAST NAME) / EMAIL ADDRESS,</p>
-	            	<p>good news! your order has been shipped and is on the way.</p>
+	            	<p>DEAR CUSTOMER'S FIRST NAME / LAST NAME / FULL NAME (FIRST NAME + LAST NAME) / EMAIL ADDRESS,</p>
+	            	<p>GOOD NEWS! YOUR ORDER HAS BEEN SHIPPED AND IS ON THE WAY.</p>
           		</div>
-          		<a href="#" style="text-align: center;padding:8px 20px; border:none;left:40%;transform: translateX(-40%);position: relative;margin-bottom: 10px;overflow:hidden;background:#F69788;color:#fff;font-size: 13px;border-radius: 10px;"> VIEW ORDER</a>
+          		<div class="verify">
+          			<a href="#" class="verify-btn" style="color:#fff">view order</a>
+          		</div>
 	      	</td>
 
 	      </tr>
@@ -534,62 +613,69 @@ ul.social li{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td valign="top" width="48%" class="services">
-	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;border-radius: 10px;min-height:220px">
-	                    <tr>
-	                      <td class="text-services" style="margin-top:-50px;margin-right:50px;overflow: hidden; width:95%">
-	                      	<div style="display:flex;">
-		                      	<p style="color:#000;margin:0;padding:0;">SHIPPING INFO</p>
-		                      	<p style="color:#000;margin:0;padding:0;right:0;text-align: right;overflow: hidden;margin-left: 64%;">−</p>
-	                      	</div>
-	                      	<div style="display:flex;" class="color-div">
-	                      	<p style="width: 50px;background: tan ;height:20px"></p>
-	                      	<p style="width: 50px;background: indigo ;height:20px"></p>
-	                      	<p style="width: 50px;background: grey ;height:20px"></p>
-	                      	<p style="width: 50px;background: teal ;height:20px"></p>
-	                      </div>
-	                      	<p style="font-size: 12px;line-height: 15px;text-transform: uppercase;">shipping company name<br>
-	                      		shipping company name<br>
-	                      		shipping company name<br>
-	                      		shipping company name<br>
-	                       	tracking#12453687<br>
-	                       	tracking#12453687<br>
-	                       	tracking#12453687<br>
-	                       	tracking#12453687<br>
-	                       </p>
-	                       	<span style="font-size: 12px;line-height: 10px;color:#000">FARIHA AHMAD FARIN</span>
-	                       	<p class="address-one"style="font-size: 12px;line-height: 5px;">FLAT E, FLOOR 13, TOWER 03</p>
-	                       	<p class="address-two" style="font-size: 12px;line-height: 5px;">SERENO VERDE, 99 TAI HONG ROAD</p>
-	                       	<p class="city" style="font-size: 12px;line-height: 5px;">YUEN LONG, HONG KONG OOOO</p> 
-	                       	<p class="country" style="font-size: 12px;line-height: 5px;">HONG KONG</p>
-	                       	<p class="phone" style="font-size: 12px;line-height: 5px;">
-	                       	+85290658057</p>
-	                      </td>
-	                    </tr>
-	                  </table>
+					   	<div class="accordion" id="accordion-shipping">
+					        <div class="accordion-content">
+					            <header>
+					                <span class="accordion-content-title">
+					                	SHIPPING INFO
+					                </span>
+					                <i class="fa-solid fa-minus"></i>
+					            </header>
+					            <p class="accordion-content-description">
+					                <div id="shippingContent">
+				                      	<div style="display:flex;" class="color-div">
+					                      	<p style="width: 50px;background: tan ;height:20px;"></p>
+					                      	<p style="width: 50px;background: indigo ;height:20px;margin-left: 15px;"></p>
+					                      	<p style="width: 50px;background: grey ;height:20px;margin-left: 15px;"></p>
+					                      	<p style="width: 50px;background: teal ;height:20px;margin-left: 15px;"></p>
+				                      	</div>
+		                      			<p style="font-size: 12px;line-height: 15px;text-transform: uppercase;">shipping 		company name<br>
+			                      			shipping company name<br>
+			                      			shipping company name<br>
+			                      			shipping company name<br>
+			                       			tracking <a href="#"><u>#12453687</u></a><br>
+			                       			tracking <a href="#"><u>#12453687</u></a><br>
+			                       			tracking <a href="#"><u>#12453687</u></a><br>
+			                       			tracking <a href="#"><u>#12453687</u></a><br>
+			                       		</p>
+		                       			<span style="font-size: 12px;line-height: 10px;color:#000;font-family:yaahowuBold">FARIHA AHMAD FARIN</span>
+				                       	<p class="address-one"style="font-size: 12px;line-height: 5px;">FLAT E, FLOOR 13, TOWER 03</p>
+				                       	<p class="address-two" style="font-size: 12px;line-height: 5px;">SERENO VERDE, 99 TAI HONG ROAD</p>
+				                       	<p class="city" style="font-size: 12px;line-height: 5px;">YUEN LONG, HONG KONG OOOO</p> 
+				                       	<p class="country" style="font-size: 12px;line-height: 5px;">HONG KONG</p>
+				                       	<p class="phone" style="font-size: 12px;line-height: 5px;">
+				                       	+85290658057</p>
+		                    		</div>
+					            </p>
+					        </div>
+				    	</div>
 	                </td>
 	                <td valign="top" width="4%" class="services"></td>
 	                <td valign="top" width="48%" class="services">
-	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;margin-left:5%;min-height:220px;border-radius:10px">
-	                    <tr>
-	                      <td class="text-services">
-	                      	<!-- <h3>PAYMENT INFO</h3> -->
-	                      	<div style="display:flex;">
-		                      	<p style="color:#000;margin:0;padding:0;">PAYMENT INFO</p>
-		                      	<p style="color:#000;margin:0;padding:0;right:0;text-align: right;overflow: hidden;margin-left: 60%;">−</p>
-	                      	</div>
-	                      	<p style="width: 50px;background: tan ;height:20px"></p>
-	                      	<p style="font-size: 12px;line-height: 15px;">PAYMENT METHOD.<br>
-	                       	**** LAST 4 DIGITS</p>
-	                       	<span style="font-size: 12px;line-height: 10px;color:#000">FARIHA AHMAD FARIN</span>
-	                       	<p class="address-one"style="font-size: 12px;line-height: 5px;">FLAT E, FLOOR 13, TOWER 03</p>
-	                       	<p class="address-two" style="font-size: 12px;line-height: 5px;">SERENO VERDE, 99 TAI HONG ROAD</p>
-	                       	<p class="city" style="font-size: 12px;line-height: 5px;">YUEN LONG, HONG KONG OOOO</p> 
-	                       	<p class="country" style="font-size: 12px;line-height: 5px;">HONG KONG</p>
-	                       	<p class="phone" style="font-size: 12px;line-height: 5px;">
-	                       	+85290658057</p>
-	                      </td>
-	                    </tr>
-	                  </table>
+	                  	<div class="accordion" id="accordion-payment">
+					        <div class="accordion-content-payment">
+					            <header>
+					                <span class="accordion-content-title">
+					                	PAYMENT INFO
+					                </span>
+					                <i class="fa-solid fa-minus"></i>
+					            </header>
+					            <p class="accordion-content-description">
+					                <div id="paymentContent">
+				                      	<p style="width: 50px;background: tan ;height:20px"></p>
+				                      	<p style="font-size: 12px;line-height: 15px;font-family:yaahowuBold">PAYMENT METHOD.<br>
+				                       	**** LAST 4 DIGITS</p>
+				                       	<span style="font-size: 12px;line-height: 10px;color:#000">FARIHA AHMAD FARIN</span>
+				                       	<p class="address-one"style="font-size: 12px;line-height: 5px;">FLAT E, FLOOR 13, TOWER 03</p>
+				                       	<p class="address-two" style="font-size: 12px;line-height: 5px;">SERENO VERDE, 99 TAI HONG ROAD</p>
+				                       	<p class="city" style="font-size: 12px;line-height: 5px;">YUEN LONG, HONG KONG OOOO</p> 
+				                       	<p class="country" style="font-size: 12px;line-height: 5px;">HONG KONG</p>
+				                       	<p class="phone" style="font-size: 12px;line-height: 5px;">
+				                       	+85290658057</p>
+		                    		</div>
+					            </p>
+					        </div>
+				    	</div>
 	                </td>
               	</tr>
           	</table>
@@ -600,7 +686,7 @@ ul.social li{
 	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;border-radius: 10px;min-height:220px;margin-top:10px">
 	                    <tr>
 	                      <td class="text-services" style="margin-top:-50px">
-	                      	<h3>ITEM(S) ORDERED:</h3>
+	                      	<h3 style="font-family:yaahowuBold">ITEM(S) ORDERED:</h3>
 	                      	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 				          		<tr>
 				          			<td valign="top" width="100%" class="services">
@@ -763,54 +849,60 @@ ul.social li{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td valign="top" width="50%" class="services">
-	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;border-radius: 10px;min-height:220px">
-	                    <tr>
-	                      <td>
-	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;">order summary</p>
-	                      </td>
-	                      <td>
-	                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;">&#8722;</p>
-	                      </td>
-	                    </tr>
-	                    <tr>
-	                      <td>
-	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">items total</p>
-	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">discounts</p>
-	                      </td>
-	                      <td>
-	                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$50</p>
-	                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">-US$5</p>
-	                      </td>
-	                    </tr>
-	                    <tr>
-	                    	<td colspan="2">
-	                    	<p style="border-bottom:1px solid #74b49b;width:95%;margin-left:2.5%"></p>
-	                    	</td>
-	                    </tr>
-	                    <tr>
-	                      <td>
-	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">subtotal</p>
-	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">shipping</p>
-	                      </td>
-	                      <td>
-	                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$45</p>
-	                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$2</p>
-	                      </td>
-	                    </tr>
-	                    <tr>
-	                    	<td colspan="2">
-	                    	<p style="border-bottom:1px solid #74b49b;width:95%;margin-left:2.5%"></p>
-	                    	</td>
-	                    </tr>
-	                    <tr>
-	                      <td>
-	                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">order total</p>
-	                      </td>
-	                      <td>
-	                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$47</p>
-	                      </td>
-	                    </tr>
-	                  </table>
+          				<div class="accordion" id="accordion-payment">
+					        <div class="accordion-content-payment">
+					            <header>
+					                <span class="accordion-content-title">
+					                	ORDER SUMMARY
+					                </span>
+					                <i class="fa-solid fa-minus"></i>
+					            </header>
+					            <p class="accordion-content-description">
+					                <div id="paymentContent">
+				                      	<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						                    <tr>
+						                      <td>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">items total</p>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">discounts</p>
+						                      </td>
+						                      <td>
+						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$50</p>
+						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">-US$5</p>
+						                      </td>
+						                    </tr>
+						                    <tr>
+						                    	<td colspan="2">
+						                    	<p style="border-bottom:1px solid #74b49b;width:95%;margin-left:2.5%"></p>
+						                    	</td>
+						                    </tr>
+						                    <tr>
+						                      <td>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">subtotal</p>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">shipping</p>
+						                      </td>
+						                      <td>
+						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$45</p>
+						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$2</p>
+						                      </td>
+						                    </tr>
+						                    <tr>
+						                    	<td colspan="2">
+						                    	<p style="border-bottom:1px solid #74b49b;width:95%;margin-left:2.5%"></p>
+						                    	</td>
+						                    </tr>
+						                    <tr>
+						                      <td>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">order total</p>
+						                      </td>
+						                      <td>
+						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$47</p>
+						                      </td>
+						                    </tr>
+						                  </table>
+		                    		</div>
+					            </p>
+					        </div>
+				    	</div>
 	                </td>
 	                <td valign="top" width="50%" class="services"></td>
               	</tr>
@@ -826,20 +918,26 @@ ul.social li{
           <td valign="top" class="bg_white" style="padding: 0;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-			          <td width="60%" style="text-align: center;">
-			            <ul class="social">
-			            <li><a href="#"><img src="images/005-facebook.png" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                		<li><a href="#"><img src="images/2701883.webp" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                		<li><a href="#"><img src="images/006-instagram-logo.png" alt="" style="width: 16px; max-width: 600px; height: auto; display: block;"></a></li>
-                	</ul>
-			          </td>
+			        <td width="60%" style="text-align: center;">
+			            <ul class="social verify">
+			            	<li>
+			            		<a href="#"><i class="fa-brands fa-facebook"></i></a>
+			            	</li>
+                			<li>
+                				<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                			</li>
+                			<li>
+                				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+                			</li>
+                		</ul>
+			        </td>
           		</tr>
           	</table>
           </td>
       	</tr>
       	
        	<tr>
-          <td valign="top" class="bg_white" style="padding: 0;">
+          <td valign="top" class="bg_white verify" style="padding: 0;">
           	<p style="text-align: center"> &#169;2022 AEQUM CUSTOMIZED COSMETICS LIMITED</p>
           </td>
       	</tr>
@@ -847,8 +945,8 @@ ul.social li{
           <td valign="top" class="bg_white" style="padding: 0;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-			          <td class="required-link" width="60%" style="text-align: center;">
-			            <ul>
+			          <td>
+			            <ul class="verify required-link">
                 		<li><a href="#">TERMS AND CONDITIONS</a></li>
                 		<li><a href="#">PRIVACY POLICY</a></li>
                 		<li><a href="#">CONTACT US</a></li>
@@ -862,5 +960,54 @@ ul.social li{
       </table>
     </div>
   </center>
+  <script>
+        const accordionContent = document.querySelectorAll(".accordion-content");
+        accordionContent.forEach((item,index)=>{
+        let header = item.querySelector("header");
+        header.addEventListener("click", ()=>{
+            item.classList.toggle("is-open");
+        	let identifier = [".accordion-content","#shippingContent"];
+            let description = item.querySelector(".accordion-content-description");
+            (item.classList.contains("is-open"))?isOpen(description,item,identifier):isClose(description,item,identifier);
+            removeOpenedContent(index); 
+        })
+        })
+        const accordionContent2 = document.querySelectorAll(".accordion-content-payment");
+        accordionContent2.forEach((item,index)=>{
+        let header = item.querySelector("header");
+        header.addEventListener("click", ()=>{
+            item.classList.toggle("is-open");
+        	let identifier = [".accordion-content-payment","#paymentContent"];
+            let description = item.querySelector(".accordion-content-description");
+            (item.classList.contains("is-open"))?isOpen(description,item,identifier):isClose(description,item,identifier);
+            removeOpenedContent(index); 
+        })
+        })
+        function isOpen(description,item,identifier){
+        	description.style.height=`${description.scrollHeight}px`; 
+            item.querySelector("i").classList.replace("fa-minus","fa-plus");
+            document.querySelector(`${identifier[0]}`).style.height="30px";
+            document.querySelector(`${identifier[1]}`).style.display="none";
+        }
+        function isClose(description,item,identifier){
+        	description.style.height = "0px";
+            item.querySelector("i").classList.replace("fa-plus","fa-minus");
+            document.querySelector(`${identifier[0]}`).style.height="100%";
+            document.querySelector(`${identifier[1]}`).style.display="block";
+        }
+        //
+        function removeOpenedContent(index){
+        accordionContent.forEach((item2,index2)=>{
+            if(index != index2){
+                item2.classList.remove("is-open");
+                let descrip = item2.querySelector(".accordion-content-description");
+                let descrip2 = document.querySelector(".accordion");
+                /*descrip.style.height="0px";*/
+                descrip2.style.height="0px";
+                item2.querySelector("i").classList.replace("fa-minus","fa-plus");
+            }
+        })
+        }
+    </script>
 </body>
 </html>
