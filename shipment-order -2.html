@@ -480,7 +480,7 @@ ul.social li a{
 .bg_white a{
 	color: #000;
 }
-#shippingContent,#paymentContent {
+#shippingContent,#paymentContent,#summeryContent {
      display: block;
      margin-left: 10px; /* Initially hide the content */
 }
@@ -518,14 +518,26 @@ ul.social li a{
 	    justify-content: space-between;
 	    transition:all 0.2s linear;
     }
+    .accordion-content-shipping header{
+	    display:flex;
+	    min-height: 50px;
+	    padding: 0 15px;
+	    cursor: pointer;
+	    align-items: center;
+	    justify-content: space-between;
+	    transition:all 0.2s linear;
+    }
     .accordion-content.is-open header{
     	min-height: 35px;
     }
     .accordion-content-payment.is-open header{
     	min-height: 35px;
     }
+    .accordion-content-shipping.is-open header{
+    	min-height: 35px;
+    }
     .accordion-content-title{
-	    font-size: 1rem;
+	    font-size: .8rem;
 	    font-weight: 600;
 	    color:#000000;
     }
@@ -849,8 +861,8 @@ ul.social li a{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td valign="top" width="50%" class="services">
-          				<div class="accordion" id="accordion-payment">
-					        <div class="accordion-content-payment">
+          				<div class="accordion" id="accordion-shipping">
+					        <div class="accordion-content-shipping">
 					            <header>
 					                <span class="accordion-content-title">
 					                	ORDER SUMMARY
@@ -858,7 +870,7 @@ ul.social li a{
 					                <i class="fa-solid fa-minus"></i>
 					            </header>
 					            <p class="accordion-content-description">
-					                <div id="paymentContent">
+					                <div id="summeryContent">
 				                      	<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 						                    <tr>
 						                      <td>
@@ -978,6 +990,17 @@ ul.social li a{
         header.addEventListener("click", ()=>{
             item.classList.toggle("is-open");
         	let identifier = [".accordion-content-payment","#paymentContent"];
+            let description = item.querySelector(".accordion-content-description");
+            (item.classList.contains("is-open"))?isOpen(description,item,identifier):isClose(description,item,identifier);
+            removeOpenedContent(index); 
+        })
+        })
+        const accordionContent3 = document.querySelectorAll(".accordion-content-shipping");
+        accordionContent3.forEach((item,index)=>{
+        let header = item.querySelector("header");
+        header.addEventListener("click", ()=>{
+            item.classList.toggle("is-open");
+        	let identifier = [".accordion-content-shipping","#summeryContent"];
             let description = item.querySelector(".accordion-content-description");
             (item.classList.contains("is-open"))?isOpen(description,item,identifier):isClose(description,item,identifier);
             removeOpenedContent(index); 
