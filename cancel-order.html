@@ -16,8 +16,8 @@
     <style>
     @import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
     @font-face{
-    	font-family:'yaahowuBold';
-    	src:url("fonts/Yaahowu Bold.ttf");
+    font-family:'yaahowuBold';
+    src:url("fonts/Yaahowu Bold.ttf");
 	}
 	@font-face{
 	    font-family:'yaahowuOnoNiha';
@@ -31,6 +31,7 @@ body {
     width: 100% !important;
     background: #fff;
     font-family:'yaahowuOnoNiha';
+    color:#000;
 }
 
 /* What it does: Stops email clients resizing small text. */
@@ -200,6 +201,7 @@ body{
 	font-size: 15px;
 	line-height: 1.8;
 	color: rgba(0,0,0,.5);
+	color:#000;
 }
 
 a{
@@ -409,13 +411,13 @@ ul.social{
 ul.social li{
 	display: inline-block;
 	margin-right: 10px;
-	border: 1px solid #F69788;
+	border: 1px solid #000;
 	padding: 9px 15px;
 	border-radius: 50%;
 	overflow: hidden;
 }
 ul.social li a{
-	color:#F69788;
+	color:#000;
 }
 
 /*FOOTER*/
@@ -477,6 +479,12 @@ ul.social li a{
     font-size: 13px;
     border-radius: 10px;
     text-transform: uppercase;
+    border:1.5px solid #F69788;
+}
+.verify-btn:hover{
+    color:#000;
+    border:1.5px solid #000;
+    background: none;
 }
 .bg_white a{
 	color: #000;
@@ -486,7 +494,7 @@ ul.social li a{
      margin-left: 10px; /* Initially hide the content */
 }
 .accordion{
-    	border: 1px solid #74b49b;
+    	border: 1px solid #000;
     	border-radius: 10px;
     	/*min-height: 220px;*/
     }
@@ -498,9 +506,6 @@ ul.social li a{
     overflow: hidden;*/
     }
     
-    .accordion-content.is-open{
-    padding-bottom: 10px;
-    }
     .accordion-content header{
 	    display:flex;
 	    min-height: 50px;
@@ -543,13 +548,31 @@ ul.social li a{
 	    color:#000000;
     }
     .accordion-content-description{
-    height:0;
-    font-size: 13px;
-    color:#000000;
-    font-weight: 400;
-    padding: 0 15px;
+	    height:0;
+	    font-size: 13px;
+	    color:#000000;
+	    font-weight: 400;
+	    padding: 0 15px;
     }
-
+    .buy-again{
+    	text-align: center;
+    	padding:8px 36px;
+    	position: relative;
+    	margin-bottom: 10px;
+    	overflow:hidden;
+    	background:#F69788;
+    	color:#fff;
+    	font-size: 13px;
+    	border-radius: 10px;
+    	width: 100%; 
+    	text-transform: uppercase;
+    	border: 1px solid #F69788;
+    }
+    .buy-again:hover{
+    	border: 1px solid #000;
+    	background:none;
+    	color:#000;
+    }
 
     </style>
 
@@ -576,25 +599,25 @@ ul.social li a{
 	      </tr><!-- end tr -->
         <tr>
           <td class="bg_white" style="padding:5px 10px;color:#000;font-weight:bold;text-transform: uppercase;">
-          	<p><a href="#">BASIC CUSTOM COSMETICS</a> | YOUR ORDER HAS BEEN CANCELLED.</p>
+          	<p><a href="#">BASIC CUSTOM COSMETICS</a> | YOUR ORDER HAS BEEN CANCELLED</p>
           </td>
         </tr>
 	     <!-- end tr -->
 	      <tr>
-	      	<td class="bg_white email-section">
+	      	<td class="email-section">
 	      		<div class="heading-section" style="text-align: justify;text-transform: uppercase;">
 	            	<p>DEAR CUSTOMER'S FIRST NAME/LAST NAME/FULL NAME (FIRST NAME + LAST NAME) / EMAIL ADDRESS,</p>
 	            	<p>YOUR ORDER HAS BEEN CALCELLED. WE'LL PROCESS A REFUND WITHIN 7 WORKING DAYS. IF YOU HAVE ANY ISSUES WITH YOUR ORDER, YOU CAN <u><a href="">CONTACT US.</a></u></p>
           		</div>
           		<div class="verify">
-          			<a href="#" class="verify-btn" style="color:#fff">verify</a>
+          			<a href="#" class="verify-btn">verify</a>
           		</div>
 	      	</td>
 
 	      </tr>
 	      <tr>
           <td class="email-section" style="margin-top: 30px;overflow: hidden;">
-          	<p style="border-bottom:1.8px solid #74b49b;color:#000; font-size:13px;font-family:yaahowuBold">ORDER DETAILS</p>
+          	<p style="border-bottom:1.2px solid #000;color:#000; font-size:13px;font-family:yaahowuBold">ORDER DETAILS</p>
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td valign="top" width="50%" class="services">
@@ -612,14 +635,14 @@ ul.social li a{
                     <tr>
                       <td class="text-services" style="text-align:right;text-transform: uppercase;">
                       	<h3>ORDER STATUS: CANCELLED</h3>
-                       	<p><u><a href="#">VIEW INVOICE</a></u></p>
+                       	<p><u><a href="#" style="color: #000;">VIEW INVOICE</a></u></p>
                       </td>
                     </tr>
                   </table>
                 </td>
               </tr>
           	</table>
-          	<hr>
+          	 <div style="margin:10px 0px;border-bottom:1.2px solid #000"></div>
           </td>
         </tr>
 	    <tr>
@@ -627,10 +650,10 @@ ul.social li a{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
 	                <td valign="top" width="48%" class="services">
-					   	<div class="accordion" id="accordion-shipping">
+					   	<div class="accordion" id="accordion-shipping" style="min-height: 235px;">
 					        <div class="accordion-content">
 					            <header>
-					                <span class="accordion-content-title">
+					                <span class="accordion-content-title" style="margin-left:-3px">
 					                	SHIPPING INFO
 					                </span>
 					                <i class="fa-solid fa-minus"></i>
@@ -654,7 +677,7 @@ ul.social li a{
 	                  	<div class="accordion" id="accordion-payment">
 					        <div class="accordion-content-payment">
 					            <header>
-					                <span class="accordion-content-title">
+					                <span class="accordion-content-title" style="margin-left:-3px">
 					                	PAYMENT INFO
 					                </span>
 					                <i class="fa-solid fa-minus"></i>
@@ -662,9 +685,9 @@ ul.social li a{
 					            <p class="accordion-content-description">
 					                <div id="paymentContent">
 				                      	<p style="width: 50px;background: #12AD2B ;height:20px;margin-top:-20px"></p>
-				                      	<p style="font-size: 12px;line-height: 15px;font-family:yaahowuBold">PAYMENT METHOD.<br>
+				                      	<p style="font-size: 12px;line-height: 15px;font-family:yaahowuBold">PAYMENT METHOD<br>
 				                       	**** LAST 4 DIGITS</p>
-				                       	<span style="font-size: 12px;line-height: 10px;color:#000">FARIHA AHMAD FARIN</span>
+				                       	<span style="font-size: 12px;line-height: 10px;color:#000;font-family:yaahowuBold"">FARIHA AHMAD FARIN</span>
 				                       	<p class="address-one"style="font-size: 12px;line-height: 5px;">FLAT E, FLOOR 13, TOWER 03</p>
 				                       	<p class="address-two" style="font-size: 12px;line-height: 5px;">SERENO VERDE, 99 TAI HONG ROAD</p>
 				                       	<p class="city" style="font-size: 12px;line-height: 5px;">YUEN LONG, HONG KONG OOOO</p> 
@@ -682,7 +705,7 @@ ul.social li a{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td valign="top" width="100%" class="services">
-	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #74b49b;border-radius: 10px;min-height:220px;margin-top:10px">
+	                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="border:1px solid #000;border-radius: 10px;min-height:220px;margin-top:10px">
 	                    <tr>
 	                      <td class="text-services" style="margin-top:-50px">
 	                      	<h3 style="font-family:yaahowuBold">ITEM(S) ORDERED:</h3>
@@ -692,7 +715,7 @@ ul.social li a{
 					                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  >
 					                    <tr>
 					                      <td>
-					                      	<p style="width: 100%;height: 80px;background: #00A36C;border: 1px solid #74b49b;border-radius: 10px;">
+					                      	<p style="width: 100%;height: 80px;background: #00A36C;border: 1.6px solid #000;border-radius: 10px;">
 					                      		
 					                      	</p>
 					                      	<p style="text-transform:uppercase;line-height:15px;margin-top:-10px;text-align: center;">Mega long lasting 12 hours Lipstick</p>
@@ -705,7 +728,7 @@ ul.social li a{
 					                    </tr>
 					                    <tr>
 					                      <td>
-					                      	<a style="text-align: center;padding:8px 36px; border:none;position: relative;margin-bottom: 10px;overflow:hidden;background:#F69788;color:#fff;font-size: 13px;border-radius: 10px;width: 100%; text-transform: uppercase;">buy again</a>
+					                      	<a class="buy-again">buy again</a>
 					                      </td>
 					                      <td>
 					                      	<p style="margin: 0;padding: 0;text-transform: uppercase;font-size: 13px;text-align: center;">price</p>
@@ -721,7 +744,7 @@ ul.social li a{
 					                      </td>
 					                    </tr>
 					                  </table>
-					                  <hr>
+					                   <div style="margin:10px 0px;border-bottom:1.2px solid #000"></div>
 					                </td>
 				              	</tr>
 				              	<tr>
@@ -729,7 +752,7 @@ ul.social li a{
 					                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  >
 					                    <tr>
 					                      <td>
-					                      	<p style="width: 100%;height: 80px;background: #A020F0;border: 1px solid #74b49b;border-radius: 10px;">
+					                      	<p style="width: 100%;height: 80px;background: #A020F0;border: 1.6px solid #000;border-radius: 10px;">
 					                      		
 					                      	</p>
 					                      	<p style="text-transform:uppercase;line-height:15px;margin-top:-10px;text-align: center;">lipstick</p>
@@ -742,7 +765,7 @@ ul.social li a{
 					                    </tr>
 					                    <tr>
 					                      <td>
-					                      	<a style="text-align: center;padding:8px 36px; border:none;position: relative;margin-bottom: 10px;overflow:hidden;background:#F69788;color:#fff;font-size: 13px;border-radius: 10px;width: 100%; text-transform: uppercase;">buy again</a>
+					                      	<a class="buy-again">buy again</a>
 					                      </td>
 					                      <td>
 					                      	<p style="margin: 0;padding: 0;text-transform: uppercase;font-size: 13px;text-align: center;">price</p>
@@ -758,7 +781,7 @@ ul.social li a{
 					                      </td>
 					                    </tr>
 					                  </table>
-					                  <hr>
+					                   <div style="margin:10px 0px;border-bottom:1.2px solid #000"></div>
 					                </td>
 				              	</tr>
 				              	<tr>
@@ -766,7 +789,7 @@ ul.social li a{
 					                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  >
 					                    <tr>
 					                      <td>
-					                      	<p style="width: 100%;height: 80px;background: lightblue;border: 1px solid #74b49b;border-radius: 10px;">
+					                      	<p style="width: 100%;height: 80px;background: lightblue;border: 1.6px solid #000;border-radius: 10px;">
 					                      		
 					                      	</p>
 					                      	<p style="text-transform:uppercase;line-height:15px;margin-top:-10px;text-align: center;">eyeshadow</p>
@@ -779,7 +802,7 @@ ul.social li a{
 					                    </tr>
 					                    <tr>
 					                      <td>
-					                      	<a style="text-align: center;padding:8px 36px; border:none;position: relative;margin-bottom: 10px;overflow:hidden;background:#F69788;color:#fff;font-size: 13px;border-radius: 10px;width: 100%; text-transform: uppercase;">buy again</a>
+					                      	<a class="buy-again">buy again</a>
 					                      </td>
 					                      <td>
 					                      	<p style="margin: 0;padding: 0;text-transform: uppercase;font-size: 13px;text-align: center;">price</p>
@@ -795,7 +818,7 @@ ul.social li a{
 					                      </td>
 					                    </tr>
 					                  </table>
-					                  <hr>
+					                   <div style="margin:10px 0px;border-bottom:1.2px solid #000"></div>
 					                </td>
 				              	</tr>
 				              	<tr>
@@ -803,7 +826,7 @@ ul.social li a{
 					                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  >
 					                    <tr>
 					                      <td>
-					                      	<p style="width: 100%;height: 80px;background: yellow;border: 1px solid #74b49b;border-radius: 10px;">
+					                      	<p style="width: 100%;height: 80px;background: yellow;border: 1.6px solid #000;border-radius: 10px;">
 					                      		
 					                      	</p>
 					                      	<p style="text-transform:uppercase;line-height:15px;margin-top:-10px;text-align: center;">eyeliner</p>
@@ -816,7 +839,7 @@ ul.social li a{
 					                    </tr>
 					                    <tr>
 					                      <td>
-					                      	<a style="text-align: center;padding:8px 36px; border:none;position: relative;margin-bottom: 10px;overflow:hidden;background:#F69788;color:#fff;font-size: 13px;border-radius: 10px;width: 100%; text-transform: uppercase;">buy again</a>
+					                      	<a class="buy-again">buy again</a>
 					                      </td>
 					                      <td>
 					                      	<p style="margin: 0;padding: 0;text-transform: uppercase;font-size: 13px;text-align: center;">price</p>
@@ -861,40 +884,40 @@ ul.social li a{
 				                      	<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 						                    <tr>
 						                      <td>
-						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">items total</p>
-						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">discounts</p>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;color:#000;margin-top: 0;margin-bottom:0;">items total</p>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;color:#000;margin-top: 0;margin-bottom:0;">discounts</p>
 						                      </td>
 						                      <td>
-						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$50</p>
-						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">-US$5</p>
+						                      	<p style="text-align: right;font-size: 12px;color:#000;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$50</p>
+						                      	<p style="text-align: right;font-size: 12px;color:#000;margin-right: 10px;margin-top: 0;margin-bottom:0;">-US$5</p>
 						                      </td>
 						                    </tr>
 						                    <tr>
 						                    	<td colspan="2">
-						                    	<p style="border-bottom:1px solid #74b49b;width:95%;margin-left:2.5%"></p>
+						                    	<p style="border-bottom:1px solid #000;width:95%;margin-left:2.5%"></p>
 						                    	</td>
 						                    </tr>
 						                    <tr>
 						                      <td>
-						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">subtotal</p>
-						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">shipping</p>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;color:#000;margin-top: 0;margin-bottom:0;">subtotal</p>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;color:#000;margin-top: 0;margin-bottom:0;">shipping</p>
 						                      </td>
 						                      <td>
 						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$45</p>
-						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$2</p>
+						                      	<p style="text-align: right;font-size: 12px;color:#000;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$2</p>
 						                      </td>
 						                    </tr>
 						                    <tr>
 						                    	<td colspan="2">
-						                    	<p style="border-bottom:1px solid #74b49b;width:95%;margin-left:2.5%"></p>
+						                    	<p style="border-bottom:1px solid #000;width:95%;margin-left:2.5%"></p>
 						                    	</td>
 						                    </tr>
 						                    <tr>
 						                      <td>
-						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;font-weight: bold;margin-top: 0;margin-bottom:0;">order total</p>
+						                      	<p style="text-transform:uppercase;font-size: 12px;margin-left: 10px;color:#000;margin-top: 0;margin-bottom:0;">order total</p>
 						                      </td>
 						                      <td>
-						                      	<p style="text-align: right;font-size: 12px;font-weight: bold;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$47</p>
+						                      	<p style="text-align: right;font-size: 12px;color:#000;margin-right: 10px;margin-top: 0;margin-bottom:0;">US$47</p>
 						                      </td>
 						                    </tr>
 						                  </table>
@@ -910,7 +933,7 @@ ul.social li a{
         </tr><!-- end: tr -->
         <tr>
           <td valign="top" class="bg_white" style="padding: 0;">
-          	<p style="border-bottom: 2px solid #74b49b;padding:20px 0px;width:95%;margin-left:2.5%;"></p>
+          	<p style="border-bottom: 1.2px solid #000;padding:20px 0px;width:95%;margin-left:2.5%;"></p>
           </td>
       	</tr>
      	<tr>
@@ -968,6 +991,13 @@ ul.social li a{
         	let identifier = [".accordion-content","#shippingContent"];
             let description = item.querySelector(".accordion-content-description");
             (item.classList.contains("is-open"))?isOpen(description,item,identifier):isClose(description,item,identifier);
+            if(item.classList.contains("is-open")){
+            	let element=document.getElementById('accordion-shipping');
+            	element.style.minHeight="30px";
+            }else{
+            	let element=document.getElementById('accordion-shipping');
+            	element.style.minHeight="235px";
+            }
             removeOpenedContent(index); 
         })
         })
